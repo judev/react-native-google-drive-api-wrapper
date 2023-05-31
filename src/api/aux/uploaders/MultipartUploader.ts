@@ -33,7 +33,7 @@ export default class MultipartUploader extends Uploader {
     } else {
       const converter = Array.isArray(this.data) ? (ar: number[]) => ar : Array.from
 
-      const encodedBody = utf8.encode(body)
+      const encodedBody = body
       const encodedEnding = utf8.encode(ending)
 
       const byteArray = StaticUtils.encodedUtf8ToByteArray(encodedBody)
